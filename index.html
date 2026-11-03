@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d1c">
+  <meta name="description" content="A little universe of ideas, experiments, and quiet moments.">
+  <title>Violet Atlas — Find your somewhere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Violet Atlas home"><span class="brand-mark">✳</span><span>violet<span class="brand-light">atlas</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#discover">Discover</a><a href="#studio">Studio</a><a href="#field-notes">Field notes</a>
+    </nav>
+    <div class="top-actions">
+      <span class="live-status"><i></i> YOUR LITTLE CORNER OF THE INTERNET</span>
+      <button class="icon-button" id="command-open" aria-label="Open command menu" title="Command menu (⌘K)">⌘K</button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> AN OPEN SPACE FOR CURIOSITY <span class="eyebrow-star">✦</span></div>
+        <h1>Find your<br><span class="gradient-text">somewhere.</span></h1>
+        <p class="hero-lede">A small universe of things worth getting lost in. Make something, discover something, or just stay a while.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="#discover">Start exploring <span>↗</span></a><button class="button button-quiet" id="surprise-button"><span class="sparkle">✧</span> Surprise me</button></div>
+        <div class="hero-footnote"><div class="avatar-stack"><span>✦</span><span>☾</span><span>✳</span></div><span>Made for curious minds <b>·</b> Updated whenever</span></div>
+      </div>
+      <div class="orbit-scene" aria-label="An animated illustration of a glowing violet planet surrounded by orbiting stars">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="planet"><div class="planet-shade"></div><div class="planet-ring"></div><span class="planet-glint">✦</span></div>
+        <span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span><span class="orbit-star star-c">·</span><span class="orbit-star star-d">✳</span>
+        <div class="orbit-label label-top">ATLAS / 001</div><div class="orbit-label label-bottom">SOMEWHERE, IN BETWEEN</div>
+        <div class="orbit-coordinates">28° 04' N<br>82° 27' W</div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO WANDER</div>
+    </section>
+
+    <section class="ticker" aria-label="Site themes"><div class="ticker-track"><span>MAKE A LITTLE MAGIC</span><b>✳</b><span>FOLLOW YOUR CURIOSITY</span><b>✳</b><span>THERE IS ALWAYS MORE</span><b>✳</b><span>MAKE A LITTLE MAGIC</span><b>✳</b><span>FOLLOW YOUR CURIOSITY</span><b>✳</b><span>THERE IS ALWAYS MORE</span><b>✳</b></div></section>
+
+    <section class="section-wrap discover-section" id="discover">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE ATLAS</div><h2>Pick a direction<span class="lavender-dot">.</span></h2></div>
+        <p>There isn't a wrong way through here.<br>Follow whichever thing catches your eye.</p>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter destinations">
+        <button class="filter-chip active" data-filter="all">Everything <span>06</span></button>
+        <button class="filter-chip" data-filter="create">Create</button>
+        <button class="filter-chip" data-filter="explore">Explore</button>
+        <button class="filter-chip" data-filter="pause">Pause</button>
+      </div>
+      <div class="destination-grid" id="destination-grid">
+        <article class="destination-card card-large" data-category="create" data-destination="canvas">
+          <div class="card-art art-canvas"><div class="art-window"><span></span><span></span><span></span><div class="art-shape shape-one"></div><div class="art-shape shape-two"></div><div class="art-shape shape-three"></div></div><div class="art-caption">A PLACE TO BEGIN</div></div>
+          <div class="card-info"><div><span class="card-kicker">01 / CREATE</span><h3>The idea garden</h3><p>Plant a thought. See what grows.</p></div><button class="round-arrow" aria-label="Open idea garden">↗</button></div>
+        </article>
+        <article class="destination-card" data-category="explore" data-destination="archive">
+          <div class="card-art art-archive"><div class="archive-orb orb-one"></div><div class="archive-orb orb-two"></div><div class="archive-orb orb-three"></div><span class="art-number">∞</span><div class="art-caption">COLLECT THE UNEXPECTED</div></div>
+          <div class="card-info"><div><span class="card-kicker">02 / EXPLORE</span><h3>Curiosity archive</h3><p>Little rabbit holes, big ideas.</p></div><button class="round-arrow" aria-label="Open curiosity archive">↗</button></div>
+        </article>
+        <article class="destination-card" data-category="pause" data-destination="pause">
+          <div class="card-art art-pause"><div class="moon-disc"></div><div class="moon-halo"></div><div class="pause-stars">·　✦　　·<br>　　·　✧</div><div class="art-caption">TAKE THE LONG WAY</div></div>
+          <div class="card-info"><div><span class="card-kicker">03 / PAUSE</span><h3>The quiet room</h3><p>A moment with nowhere to be.</p></div><button class="round-arrow" aria-label="Open quiet room">↗</button></div>
+        </article>
+        <article class="destination-card" data-category="create" data-destination="type">
+          <div class="card-art art-type"><div class="type-big">Aa</div><div class="type-small">WORDS<br>IN MOTION</div><div class="type-lines"></div><div class="art-caption">PLAY WITH THE DETAILS</div></div>
+          <div class="card-info"><div><span class="card-kicker">04 / CREATE</span><h3>Type playground</h3><p>Make letters feel like something.</p></div><button class="round-arrow" aria-label="Open type playground">↗</button></div>
+        </article>
+        <article class="destination-card" data-category="explore" data-destination="signals">
+          <div class="card-art art-signals"><div class="signal-wave wave-one"></div><div class="signal-wave wave-two"></div><div class="signal-wave wave-three"></div><div class="signal-core">✳</div><div class="art-caption">TUNE INTO SOMETHING NEW</div></div>
+          <div class="card-info"><div><span class="card-kicker">05 / EXPLORE</span><h3>Daily signal</h3><p>A fresh prompt for your brain.</p></div><button class="round-arrow" aria-label="Open daily signal">↗</button></div>
+        </article>
+        <article class="destination-card" data-category="pause" data-destination="focus">
+          <div class="card-art art-focus"><div class="focus-ring"><span>25:00</span></div><div class="focus-cross">+</div><div class="art-caption">ONE THING AT A TIME</div></div>
+          <div class="card-info"><div><span class="card-kicker">06 / PAUSE</span><h3>Focus orbit</h3><p>Give one thing your full attention.</p></div><button class="round-arrow" aria-label="Open focus orbit">↗</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio-section" id="studio">
+      <div class="section-wrap studio-layout">
+        <div class="studio-copy"><div class="eyebrow"><span class="eyebrow-line"></span> THE LITTLE STUDIO</div><h2>Make a mark<br>in the <span class="gradient-text">universe.</span></h2><p>Build your own tiny constellation. Add stars wherever you like, connect the dots, and make a pattern that's yours.</p><div class="studio-tools"><button class="button button-primary" id="random-stars">Scatter stars <span>✳</span></button><button class="button button-outline" id="clear-stars">Clear canvas</button></div><div class="studio-hint"><span class="hint-dot"></span> Click or tap anywhere inside the canvas to add a star.</div></div>
+        <div class="starboard-wrap"><div class="starboard-top"><span><i></i> LIVE CANVAS</span><span id="star-count">12 STARS</span></div><canvas id="starboard" aria-label="Interactive star canvas. Click to add stars."></canvas><div class="starboard-bottom"><span>YOUR CONSTELLATION</span><button id="download-stars">↓ SAVE IMAGE</button></div></div>
+      </div>
+    </section>
+
+    <section class="section-wrap signal-section" id="field-notes">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES</div><h2>Catch a thought<span class="lavender-dot">.</span></h2></div><p>A place to leave a little note for your future self. It stays right here in this browser.</p></div>
+      <div class="notes-layout">
+        <div class="note-prompt"><span class="prompt-icon">✧</span><span class="card-kicker">A QUESTION TO KEEP</span><h3 id="note-question">What would you make if you knew it didn't have to be perfect?</h3><button class="text-button" id="new-question">Give me another ↗</button><div class="prompt-decoration">✳</div></div>
+        <form class="note-form" id="note-form"><label for="note-input">YOUR FIELD NOTE</label><textarea id="note-input" maxlength="280" placeholder="A thought, a plan, a tiny observation..." required></textarea><div class="form-bottom"><span id="char-count">0 / 280</span><button class="button button-primary" type="submit">Save note <span>↗</span></button></div><div class="form-message" id="form-message" role="status"></div></form>
+      </div>
+      <div class="saved-notes-head"><h3>Your collected thoughts <span id="note-total">0</span></h3><button class="text-button" id="clear-notes">Clear all</button></div>
+      <div class="saved-notes" id="saved-notes"><div class="empty-notes"><span>✧</span><p>Your notes will find a home here.</p></div></div>
+    </section>
+
+    <section class="closing-section"><div class="closing-orb"></div><div class="closing-content"><div class="eyebrow">YOU MADE IT HERE</div><h2>Stay a little<br><span class="gradient-text">curious.</span></h2><p>The universe is bigger when you keep looking.</p><a href="#home" class="button button-primary">Back to the beginning ↑</a></div><div class="closing-coordinate">END OF THIS LITTLE LOOP<br>BEGINNING OF THE NEXT</div></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">✳</span><span>violet<span class="brand-light">atlas</span></span></a><span>AN INTERNET PLACE TO CALL YOUR OWN.</span><span>© <span id="year"></span> · MADE OF CURIOSITY</span></footer>
+
+  <div class="modal-backdrop" id="destination-modal" aria-hidden="true"><section class="destination-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close dialog">×</button><div class="modal-eyebrow" id="modal-kicker">ATLAS / 001</div><div class="modal-symbol" id="modal-symbol">✧</div><h2 id="modal-title">A new direction</h2><p id="modal-description">Every interesting thing starts somewhere.</p><div class="modal-extra" id="modal-extra"></div><button class="button button-primary" id="modal-action">Let's go <span>↗</span></button></section></div>
+  <div class="command-backdrop" id="command-backdrop"><section class="command-box" role="dialog" aria-modal="true" aria-label="Quick navigation"><div class="command-input-row"><span>⌕</span><input id="command-input" type="text" placeholder="Where do you want to go?" autocomplete="off"><kbd>ESC</kbd></div><div class="command-label">QUICK JUMPS</div><div class="command-list"><button data-jump="#home"><span>✳</span> Home <kbd>H</kbd></button><button data-jump="#discover"><span>✦</span> Discover <kbd>D</kbd></button><button data-jump="#studio"><span>✧</span> Little studio <kbd>S</kbd></button><button data-jump="#field-notes"><span>⌁</span> Field notes <kbd>N</kbd></button></div><div class="command-foot">VIOLET ATLAS <span>·</span> A SHORTCUT TO SOMEWHERE</div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
