@@ -3,115 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#100d1c">
-  <meta name="description" content="A little universe of ideas, experiments, and quiet moments.">
-  <title>Violet Atlas — Find your somewhere</title>
+  <meta name="theme-color" content="#b99aff">
+  <meta name="description" content="Sidequest Club: tiny games, strange facts, big laughs, and very important nonsense.">
+  <title>Sidequest Club — Bored? Not for long.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="page-glow glow-one" aria-hidden="true"></div>
-  <div class="page-glow glow-two" aria-hidden="true"></div>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Violet Atlas home"><span class="brand-mark">✳</span><span>violet<span class="brand-light">atlas</span></span></a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#discover">Discover</a><a href="#studio">Studio</a><a href="#field-notes">Field notes</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="top-strip"><span>THE INTERNET'S LEAST PRODUCTIVE PRODUCTIVITY CLUB</span><span class="strip-right">OPEN 24/7-ish <i></i></span></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Sidequest Club home"><span class="logo-icon">S<span>!</span></span><span>SIDEQUEST<span class="logo-small">CLUB</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#arcade">The arcade</a>
+      <a href="#odd-stuff">Odd stuff</a>
+      <a href="#challenge">Your mission</a>
     </nav>
-    <div class="top-actions">
-      <span class="live-status"><i></i> YOUR LITTLE CORNER OF THE INTERNET</span>
-      <button class="icon-button" id="command-open" aria-label="Open command menu" title="Command menu (⌘K)">⌘K</button>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    </div>
+    <div class="header-right"><span class="online-dot"></span><span class="online-label">CURRENTLY BEING WEIRD</span><button class="sound-toggle" id="sound-toggle" aria-pressed="false" title="Toggle tiny sound effects">SOUND OFF</button><button class="menu-button" id="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div>
   </header>
 
-  <main id="home">
-    <section class="hero section-wrap">
+  <main id="top">
+    <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span> AN OPEN SPACE FOR CURIOSITY <span class="eyebrow-star">✦</span></div>
-        <h1>Find your<br><span class="gradient-text">somewhere.</span></h1>
-        <p class="hero-lede">A small universe of things worth getting lost in. Make something, discover something, or just stay a while.</p>
-        <div class="hero-buttons"><a class="button button-primary" href="#discover">Start exploring <span>↗</span></a><button class="button button-quiet" id="surprise-button"><span class="sparkle">✧</span> Surprise me</button></div>
-        <div class="hero-footnote"><div class="avatar-stack"><span>✦</span><span>☾</span><span>✳</span></div><span>Made for curious minds <b>·</b> Updated whenever</span></div>
+        <div class="eyebrow"><span class="eyebrow-star">✳</span> WELCOME TO YOUR NEW TAB PROBLEM <span class="scribble">(the fun kind)</span></div>
+        <h1>Bored?<br><span class="headline-highlight">Not for</span><br><span class="headline-last">long.</span></h1>
+        <p class="hero-description">Tiny games. Weird questions. Unexpected rabbit holes. A little bit of chaos, carefully arranged.</p>
+        <div class="hero-actions"><button class="button button-dark" id="surprise-me">Pick my sidequest <span>↗</span></button><a class="text-link" href="#arcade">I want to choose <span>↓</span></a></div>
+        <div class="hero-note"><span class="tiny-stamp">NO<br>LORE<br>REQUIRED</span><span>Zero sign-ups. No downloads.<br>Just click around and have a good time.</span></div>
       </div>
-      <div class="orbit-scene" aria-label="An animated illustration of a glowing violet planet surrounded by orbiting stars">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="planet"><div class="planet-shade"></div><div class="planet-ring"></div><span class="planet-glint">✦</span></div>
-        <span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span><span class="orbit-star star-c">·</span><span class="orbit-star star-d">✳</span>
-        <div class="orbit-label label-top">ATLAS / 001</div><div class="orbit-label label-bottom">SOMEWHERE, IN BETWEEN</div>
-        <div class="orbit-coordinates">28° 04' N<br>82° 27' W</div>
+      <div class="hero-art" aria-label="A playful purple character holding a tiny flag">
+        <div class="burst burst-one">✳</div><div class="burst burst-two">✦</div>
+        <div class="hero-note-card note-card-top"><span>IMPORTANT</span><strong>you are<br>allowed to<br>be silly</strong><b>↘</b></div>
+        <div class="character-stage"><div class="stage-shadow"></div><div class="blob-character"><div class="blob-shine"></div><div class="eyes"><i></i><i></i></div><div class="cheeks"><i></i><i></i></div><div class="mouth"></div><div class="blob-arm arm-left"></div><div class="blob-arm arm-right"></div><div class="blob-feet"><i></i><i></i></div></div><div class="flag-pole"></div><div class="flag">HI!</div></div>
+        <div class="hero-note-card note-card-bottom"><span>EST. FIVE SECONDS AGO</span><strong>100%<br>nonsense</strong><div class="mini-stars">✦ ✳ ✦</div></div>
+        <div class="orbit-doodle doodle-a">↝</div><div class="orbit-doodle doodle-b">!!!</div>
       </div>
-      <div class="scroll-cue"><span></span> SCROLL TO WANDER</div>
+      <div class="hero-bottom-line"><span>SCROLL DOWN FOR POOR DECISIONS</span><span>↓ ↓ ↓</span><span>TAKE WHAT YOU NEED. LEAVE THE BORING.</span></div>
     </section>
 
-    <section class="ticker" aria-label="Site themes"><div class="ticker-track"><span>MAKE A LITTLE MAGIC</span><b>✳</b><span>FOLLOW YOUR CURIOSITY</span><b>✳</b><span>THERE IS ALWAYS MORE</span><b>✳</b><span>MAKE A LITTLE MAGIC</span><b>✳</b><span>FOLLOW YOUR CURIOSITY</span><b>✳</b><span>THERE IS ALWAYS MORE</span><b>✳</b></div></section>
+    <section class="ticker" aria-label="Things you can do here"><div class="ticker-track"><span>PLAY A ROUND</span><b>✳</b><span>LOSE TRACK OF THE BORING</span><b>✳</b><span>LEARN A USELESS FACT</span><b>✳</b><span>WIN ABSOLUTELY NOTHING</span><b>✳</b><span>PLAY A ROUND</span><b>✳</b><span>LOSE TRACK OF THE BORING</span><b>✳</b><span>LEARN A USELESS FACT</span><b>✳</b><span>WIN ABSOLUTELY NOTHING</span><b>✳</b></div></section>
 
-    <section class="section-wrap discover-section" id="discover">
-      <div class="section-heading">
-        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE ATLAS</div><h2>Pick a direction<span class="lavender-dot">.</span></h2></div>
-        <p>There isn't a wrong way through here.<br>Follow whichever thing catches your eye.</p>
+    <section class="section arcade-section" id="arcade">
+      <div class="section-intro"><div><div class="section-tag">01 / THE ARCADE</div><h2>Pick your<br><span>kind of chaos.</span></h2></div><p>Some are quick. Some are weird. All of them are better than staring at the same three apps.</p></div>
+      <div class="arcade-grid">
+        <article class="game-card quiz-card"><div class="card-topline"><span>01 — BRAIN STUFF</span><span class="card-badge">5 QUESTIONS</span></div><div class="quiz-illustration"><div class="quiz-bubble">?</div><div class="quiz-spark spark-a">✦</div><div class="quiz-spark spark-b">✳</div><div class="quiz-label">THINK<br>FAST(ISH)</div></div><div class="game-card-copy"><h3>Brain Blender</h3><p>Five questions. A few curveballs. How much random knowledge is in there?</p><button class="card-button" data-open-game="quiz">Play the quiz <span>↗</span></button></div></article>
+        <article class="game-card memory-card"><div class="card-topline"><span>02 — MEMORY MODE</span><span class="card-badge">MATCH 6 PAIRS</span></div><div class="memory-illustration"><div class="mini-card mini-card-one">?</div><div class="mini-card mini-card-two">✳</div><div class="mini-card mini-card-three">?</div><div class="mini-card mini-card-four">☻</div><div class="memory-zap">↯</div></div><div class="game-card-copy"><h3>Flip Frenzy</h3><p>Find the matching pairs. Your brain called. It wants a rematch.</p><button class="card-button" data-open-game="memory">Start flipping <span>↗</span></button></div></article>
+        <article class="game-card riddle-card"><div class="card-topline"><span>03 — THINK SIDEWAYS</span><span class="card-badge">20+ RIDDLES</span></div><div class="riddle-illustration"><div class="riddle-face"><i></i><i></i><b></b></div><div class="riddle-question">“WHAT AM<br>I?”</div><span class="riddle-twinkle">✦</span></div><div class="game-card-copy"><h3>Riddle Me This</h3><p>Short riddles, sneaky answers, and the occasional “ohhhh.”</p><button class="card-button" data-open-game="riddle">Give me one <span>↗</span></button></div></article>
+        <article class="game-card choices-card"><div class="card-topline"><span>04 — IMPOSSIBLE CHOICES</span><span class="card-badge">NO WRONG ANSWERS</span></div><div class="choices-illustration"><div class="choice-tile tile-left">🍕</div><div class="choice-vs">OR</div><div class="choice-tile tile-right">🍦</div><div class="choice-caption">CHOOSE<br>YOUR FIGHT</div></div><div class="game-card-copy"><h3>This or That</h3><p>Would you rather? Pick a side. Defend your extremely important opinion.</p><button class="card-button" data-open-game="choices">Make a choice <span>↗</span></button></div></article>
+        <article class="game-card bubble-card"><div class="card-topline"><span>05 — NO THOUGHTS</span><span class="card-badge">PURE SATISFACTION</span></div><div class="bubble-illustration"><div class="bubble-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>POP<br>POP<br>POP</span></div><div class="game-card-copy"><h3>Bubble Trouble</h3><p>A tiny square of bubble wrap. A surprisingly good use of 30 seconds.</p><button class="card-button" data-open-game="bubble">Pop some bubbles <span>↗</span></button></div></article>
+        <article class="game-card story-card"><div class="card-topline"><span>06 — CREATIVE CHAOS</span><span class="card-badge">INFINITE COMBOS</span></div><div class="story-illustration"><div class="story-word word-one">ALIEN</div><div class="story-plus">+</div><div class="story-word word-two">WAFFLE</div><div class="story-equals">=</div><div class="story-word word-three">???</div></div><div class="game-card-copy"><h3>Plot Twist Machine</h3><p>Generate a ridiculous story idea. Your imagination does the rest.</p><button class="card-button" data-open-game="story">Make it weird <span>↗</span></button></div></article>
       </div>
-      <div class="filter-row" role="group" aria-label="Filter destinations">
-        <button class="filter-chip active" data-filter="all">Everything <span>06</span></button>
-        <button class="filter-chip" data-filter="create">Create</button>
-        <button class="filter-chip" data-filter="explore">Explore</button>
-        <button class="filter-chip" data-filter="pause">Pause</button>
+    </section>
+
+    <section class="play-panel-section" id="game-zone">
+      <div class="play-panel" id="play-panel">
+        <div class="play-panel-heading"><div><div class="section-tag">NOW PLAYING</div><h2 id="game-title">Choose a game above.</h2></div><button class="close-game" id="close-game" aria-label="Close game">×</button></div>
+        <div class="game-content" id="game-content"><div class="empty-game"><span class="empty-game-icon">🎮</span><p>Your game will appear here.<br>Pick one from the arcade to get started.</p></div></div>
       </div>
-      <div class="destination-grid" id="destination-grid">
-        <article class="destination-card card-large" data-category="create" data-destination="canvas">
-          <div class="card-art art-canvas"><div class="art-window"><span></span><span></span><span></span><div class="art-shape shape-one"></div><div class="art-shape shape-two"></div><div class="art-shape shape-three"></div></div><div class="art-caption">A PLACE TO BEGIN</div></div>
-          <div class="card-info"><div><span class="card-kicker">01 / CREATE</span><h3>The idea garden</h3><p>Plant a thought. See what grows.</p></div><button class="round-arrow" aria-label="Open idea garden">↗</button></div>
-        </article>
-        <article class="destination-card" data-category="explore" data-destination="archive">
-          <div class="card-art art-archive"><div class="archive-orb orb-one"></div><div class="archive-orb orb-two"></div><div class="archive-orb orb-three"></div><span class="art-number">∞</span><div class="art-caption">COLLECT THE UNEXPECTED</div></div>
-          <div class="card-info"><div><span class="card-kicker">02 / EXPLORE</span><h3>Curiosity archive</h3><p>Little rabbit holes, big ideas.</p></div><button class="round-arrow" aria-label="Open curiosity archive">↗</button></div>
-        </article>
-        <article class="destination-card" data-category="pause" data-destination="pause">
-          <div class="card-art art-pause"><div class="moon-disc"></div><div class="moon-halo"></div><div class="pause-stars">·　✦　　·<br>　　·　✧</div><div class="art-caption">TAKE THE LONG WAY</div></div>
-          <div class="card-info"><div><span class="card-kicker">03 / PAUSE</span><h3>The quiet room</h3><p>A moment with nowhere to be.</p></div><button class="round-arrow" aria-label="Open quiet room">↗</button></div>
-        </article>
-        <article class="destination-card" data-category="create" data-destination="type">
-          <div class="card-art art-type"><div class="type-big">Aa</div><div class="type-small">WORDS<br>IN MOTION</div><div class="type-lines"></div><div class="art-caption">PLAY WITH THE DETAILS</div></div>
-          <div class="card-info"><div><span class="card-kicker">04 / CREATE</span><h3>Type playground</h3><p>Make letters feel like something.</p></div><button class="round-arrow" aria-label="Open type playground">↗</button></div>
-        </article>
-        <article class="destination-card" data-category="explore" data-destination="signals">
-          <div class="card-art art-signals"><div class="signal-wave wave-one"></div><div class="signal-wave wave-two"></div><div class="signal-wave wave-three"></div><div class="signal-core">✳</div><div class="art-caption">TUNE INTO SOMETHING NEW</div></div>
-          <div class="card-info"><div><span class="card-kicker">05 / EXPLORE</span><h3>Daily signal</h3><p>A fresh prompt for your brain.</p></div><button class="round-arrow" aria-label="Open daily signal">↗</button></div>
-        </article>
-        <article class="destination-card" data-category="pause" data-destination="focus">
-          <div class="card-art art-focus"><div class="focus-ring"><span>25:00</span></div><div class="focus-cross">+</div><div class="art-caption">ONE THING AT A TIME</div></div>
-          <div class="card-info"><div><span class="card-kicker">06 / PAUSE</span><h3>Focus orbit</h3><p>Give one thing your full attention.</p></div><button class="round-arrow" aria-label="Open focus orbit">↗</button></div>
+    </section>
+
+    <section class="odd-section" id="odd-stuff">
+      <div class="odd-header"><div><div class="section-tag">02 / THE ODD STUFF</div><h2>For no reason.<br><span>For every reason.</span></h2></div><div class="odd-header-sticker">100%<br>UNNECESSARY<br><b>✓</b></div></div>
+      <div class="odd-layout">
+        <article class="fact-machine"><div class="machine-label"><span>THE USELESS KNOWLEDGE MACHINE</span><span class="machine-light"><i></i> READY</span></div><div class="fact-display"><div class="fact-number" id="fact-number">FACT #001</div><p id="fact-text">A group of flamingos is called a flamboyance.</p><div class="fact-doodle" id="fact-doodle">🦩</div></div><div class="machine-footer"><span>WILL THIS HELP YOU IN LIFE? PROBABLY NOT.</span><button id="next-fact">GIVE ME ANOTHER <span>↻</span></button></div></article>
+        <article class="challenge-card" id="challenge">
+          <div class="challenge-sticker">TODAY'S<br> SIDEQUEST</div><div class="section-tag">03 / YOUR MISSION</div><div class="challenge-number">NO. <span id="challenge-number">001</span></div><h3 id="challenge-title">Invent a new holiday.</h3><p id="challenge-description">Name it, choose the date, and decide what completely unnecessary tradition everyone has to follow.</p><div class="challenge-bottom"><button class="challenge-button" id="new-challenge">New mission ↻</button><button class="done-button" id="done-challenge">I did it ✓</button></div><div class="mission-done" id="mission-done" role="status">MISSION COMPLETE. NICE WORK.</div>
         </article>
       </div>
     </section>
 
-    <section class="studio-section" id="studio">
-      <div class="section-wrap studio-layout">
-        <div class="studio-copy"><div class="eyebrow"><span class="eyebrow-line"></span> THE LITTLE STUDIO</div><h2>Make a mark<br>in the <span class="gradient-text">universe.</span></h2><p>Build your own tiny constellation. Add stars wherever you like, connect the dots, and make a pattern that's yours.</p><div class="studio-tools"><button class="button button-primary" id="random-stars">Scatter stars <span>✳</span></button><button class="button button-outline" id="clear-stars">Clear canvas</button></div><div class="studio-hint"><span class="hint-dot"></span> Click or tap anywhere inside the canvas to add a star.</div></div>
-        <div class="starboard-wrap"><div class="starboard-top"><span><i></i> LIVE CANVAS</span><span id="star-count">12 STARS</span></div><canvas id="starboard" aria-label="Interactive star canvas. Click to add stars."></canvas><div class="starboard-bottom"><span>YOUR CONSTELLATION</span><button id="download-stars">↓ SAVE IMAGE</button></div></div>
-      </div>
+    <section class="final-playground">
+      <div class="final-copy"><div class="section-tag">04 / ONE LAST THING</div><h2>Still bored?</h2><p>That sounds like a challenge.</p></div><div class="final-action"><button id="big-random" class="big-random-button"><span class="random-icon">↯</span><span>UNLEASH<br>THE RANDOM</span><b>↗</b></button><div class="random-result" id="random-result" aria-live="polite">Press the big purple button. See what happens.</div></div>
+      <div class="final-doodle doodle-left">☺</div><div class="final-doodle doodle-right">✳</div>
     </section>
-
-    <section class="section-wrap signal-section" id="field-notes">
-      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES</div><h2>Catch a thought<span class="lavender-dot">.</span></h2></div><p>A place to leave a little note for your future self. It stays right here in this browser.</p></div>
-      <div class="notes-layout">
-        <div class="note-prompt"><span class="prompt-icon">✧</span><span class="card-kicker">A QUESTION TO KEEP</span><h3 id="note-question">What would you make if you knew it didn't have to be perfect?</h3><button class="text-button" id="new-question">Give me another ↗</button><div class="prompt-decoration">✳</div></div>
-        <form class="note-form" id="note-form"><label for="note-input">YOUR FIELD NOTE</label><textarea id="note-input" maxlength="280" placeholder="A thought, a plan, a tiny observation..." required></textarea><div class="form-bottom"><span id="char-count">0 / 280</span><button class="button button-primary" type="submit">Save note <span>↗</span></button></div><div class="form-message" id="form-message" role="status"></div></form>
-      </div>
-      <div class="saved-notes-head"><h3>Your collected thoughts <span id="note-total">0</span></h3><button class="text-button" id="clear-notes">Clear all</button></div>
-      <div class="saved-notes" id="saved-notes"><div class="empty-notes"><span>✧</span><p>Your notes will find a home here.</p></div></div>
-    </section>
-
-    <section class="closing-section"><div class="closing-orb"></div><div class="closing-content"><div class="eyebrow">YOU MADE IT HERE</div><h2>Stay a little<br><span class="gradient-text">curious.</span></h2><p>The universe is bigger when you keep looking.</p><a href="#home" class="button button-primary">Back to the beginning ↑</a></div><div class="closing-coordinate">END OF THIS LITTLE LOOP<br>BEGINNING OF THE NEXT</div></section>
   </main>
 
-  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">✳</span><span>violet<span class="brand-light">atlas</span></span></a><span>AN INTERNET PLACE TO CALL YOUR OWN.</span><span>© <span id="year"></span> · MADE OF CURIOSITY</span></footer>
-
-  <div class="modal-backdrop" id="destination-modal" aria-hidden="true"><section class="destination-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close dialog">×</button><div class="modal-eyebrow" id="modal-kicker">ATLAS / 001</div><div class="modal-symbol" id="modal-symbol">✧</div><h2 id="modal-title">A new direction</h2><p id="modal-description">Every interesting thing starts somewhere.</p><div class="modal-extra" id="modal-extra"></div><button class="button button-primary" id="modal-action">Let's go <span>↗</span></button></section></div>
-  <div class="command-backdrop" id="command-backdrop"><section class="command-box" role="dialog" aria-modal="true" aria-label="Quick navigation"><div class="command-input-row"><span>⌕</span><input id="command-input" type="text" placeholder="Where do you want to go?" autocomplete="off"><kbd>ESC</kbd></div><div class="command-label">QUICK JUMPS</div><div class="command-list"><button data-jump="#home"><span>✳</span> Home <kbd>H</kbd></button><button data-jump="#discover"><span>✦</span> Discover <kbd>D</kbd></button><button data-jump="#studio"><span>✧</span> Little studio <kbd>S</kbd></button><button data-jump="#field-notes"><span>⌁</span> Field notes <kbd>N</kbd></button></div><div class="command-foot">VIOLET ATLAS <span>·</span> A SHORTCUT TO SOMEWHERE</div></section></div>
+  <footer class="site-footer"><a class="logo footer-logo" href="#top"><span class="logo-icon">S<span>!</span></span><span>SIDEQUEST<span class="logo-small">CLUB</span></span></a><p>Made for the 3:17 pm “I need something to do” moment.</p><span class="footer-credit">NO ALGORITHM. JUST NONSENSE. © <span id="year"></span></span></footer>
   <div class="toast" id="toast" role="status"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
 </body>
 </html>
