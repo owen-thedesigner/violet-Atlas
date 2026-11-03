@@ -177,6 +177,16 @@
   const shuffled = (items) => [...items].sort(() => Math.random() - .5);
   const normalize = (value) => value.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 
+  const recordKey = "sidequest-club-records";
+  let records = { quizBest: null, memoryBestMoves: null };
+  try { records = { ...records, ...JSON.parse(localStorage.getItem(recordKey) || "{}") }; } catch (error) { /* Local records are optional. */ }
+  const saveRecords = () => { try { localStorage.setItem(recordKey, JSON.stringify(records)); } catch (error) { /* Private browsing may block storage. */ } };
+  const updateRecordStrip = () => {
+    const strip = $("#record-strip");
+    if (strip) strip.textContent = `PERSONAL BESTS · QUIZ ${records.quizBest ?? "—"}/5 · MEMORY ${records.memoryBestMoves ?? "—"} MOVES`;
+  };
+  updateRecordStrip();
+
   let currentGame = null;
   let quizState = null;
   let memoryState = null;
@@ -221,6 +231,7 @@
   };
   const drawQuizResult = () => {
     const score = quizState.score;
+    if (records.quizBest === null || score > records.quizBest) { records.quizBest = score; saveRecords(); updateRecordStrip(); }
     const title = score === 5 ? "ABSOLUTE LEGEND." : score >= 3 ? "BRAIN = WORKING." : score === 0 ? "A BEAUTIFUL MYSTERY." : "GOOD WARM-UP.";
     gameContent.innerHTML = `<div class="game-result"><div class="big-result">${score}/5</div><h3>${title}</h3><p>${score === 5 ? "You got every question. Please remain humble." : "That was a delightfully random five questions."}</p><button class="game-primary-button" id="quiz-again">Run it back ↻</button></div>`;
     celebrate();
@@ -259,6 +270,7 @@
       $("#memory-feedback").textContent = "MATCH! Your memory is doing its thing.";
       tinySound(820, .12, "triangle");
       if (state.matches === 6) {
+        if (records.memoryBestMoves === null || state.moves < records.memoryBestMoves) { records.memoryBestMoves = state.moves; saveRecords(); updateRecordStrip(); }
         $("#memory-feedback").innerHTML = `YOU DID IT IN ${state.moves} MOVES. <button class="game-primary-button" id="memory-again">Play again ↻</button>`;
         celebrate();
         $("#memory-again").addEventListener("click", renderMemory);
